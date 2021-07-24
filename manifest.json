@@ -1,0 +1,19 @@
+{
+    "name": "Buyer-Show",
+    "description": "PC端查看淘宝、天猫买家秀",
+    "version": "1.2",
+    "manifest_version": 2,
+    "permissions":["webRequest","webRequestBlocking","http://*/*","https://*/*","tabs"],
+    "icons": {
+      "128" : "icon.png"
+    },
+    "background":{
+      "page":"background.html"
+    },
+    "content_scripts": [
+      {
+        "matches":["*://*.taobao.com/*","*://*.tmall.com/*"],
+        "js":["match.js"]
+      }
+    ]
+  }
